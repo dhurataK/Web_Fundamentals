@@ -1,0 +1,58 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  text-align: center;
+  font-family: monospace;
+  font-size: 75px;
+}
+    #score{
+      color: black;
+      font-size: 50px;
+      margin-left: 265px;
+    }
+#container{
+  margin-left: 100px;
+  padding-left: 85px;
+  padding-top: 20px;
+  width: 1090px;
+  height: 580px;
+  background-color: black;
+}
+
+    #map{
+      height: 1000px;
+      width: 1000px;
+    }
+            div {
+              display: inline-block;
+              width: 50px;
+              height: 50px;
+              margin: 0px;
+            }
+            .wall{
+              background-color: blue;
+            }
+            .path{
+              background-image: url('../img/coin.png');
+              background-size: cover;
+            }
+            .blank{
+              background-color: black;
+            }
+            .cherry{
+              background-image: url('../img/cherry.png');
+              background-size: cover;
+            }
+            .ghost{
+              background-image: url('../img/ghost.png');
+              background-size: cover;
+            }
+            #pacman{
+              background-image: url('../img/pacman.png');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
