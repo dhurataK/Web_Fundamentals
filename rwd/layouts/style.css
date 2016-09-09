@@ -1,0 +1,45 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+#container{
+  width: 90%;
+  margin: 0px auto;
+}
+      #container div{
+        margin: 10px 0px;
+      }
+#header{
+  background-color: silver;
+  padding: 30px;
+}
+      #header h1, h2 {
+        padding: 10px 0px;
+      }
+
+#navigation ul li{
+  display: inline-block;
+  background-color: silver;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#main div{
+  display: inline-block;
+}
+      .box{
+        width: 20%;
+        padding: 10px;
+      }
+
+/*    MEDIA QUERIES   */
+@media only screen and (max-width:975px) {
+
+  .box{
+    width: 30%;
+  }
+  #last-box{
+    width: 100%;
+  }
+}
