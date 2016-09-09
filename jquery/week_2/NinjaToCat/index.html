@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Ninja To Cat</title>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Ninja To Cat a jQuery puzzle</h2>
+      <img src='img/ninja0.png' data-alt-src='img/cat0.png'/>
+      <img src='img/ninja1.png' data-alt-src='img/cat1.png'/>
+      <img src='img/ninja2.png' data-alt-src='img/cat2.png'/>
+      <img src='img/ninja3.png' data-alt-src='img/cat3.png'/>
+      <img src='img/ninja4.png' data-alt-src='img/cat4.png'/>
+    </div>
+
+    <script>
+      $('#container').sortable();
+      $('img').on({'click':function(){
+        var cat = $(this).attr('data-alt-src');
+        var ninja = $(this).attr('src');
+        $(this).attr('src', cat);
+        $(this).attr('data-alt-src', ninja);
+      }});
+    </script>
+  </body>
+</html>

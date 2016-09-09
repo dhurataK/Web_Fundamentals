@@ -1,0 +1,19 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#container {
+  margin: 0px auto;
+  width: 960px;
+  text-align: center;
+}
+.red{
+ color: red;
+ padding: 5px 0px;
+}
+.box{
+  margin: 10px 0px;
+  background: silver;
+  text-align: center;
+  padding: 10px 0px;
+}

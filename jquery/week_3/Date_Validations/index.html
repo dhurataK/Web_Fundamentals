@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/hot-sneaks/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <title>Date Validations</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Welcome to the Codingdojo plan-a-Cruise!</h1>
+       <form action="#" method="post">
+         <input type="text" class="datepicker" placeholder="From:" id="from"><br>
+         <input type="text" class="datepicker" placeholder="To:" id="to"><br>
+         <input type="text" id="name" placeholder="Name:"><span></span><br>
+         <input type="submit" id="btn" value="Check dates!">
+       </form>
+       <div id="error_msg"></div>
+    </div>
+  </body>
+  <script>
+     $( function() {
+       $( ".datepicker" ).datepicker();
+     } );
+     $('form').submit(function(){
+       var errors=[];
+       var from_date = $('#from').val();
+       var to_date = $('#to').val();
+       var name = $('#name').val();
+       // checking errors
+       if(from_date == ""){
+         errors.push("From date can't be empty!");
+       }
+       if(to_date == ""){
+         errors.push("To date can't be empty!");
+       }
+       if(name == ""){
+         errors.push("Your name can't be blank!");
+       }
+       // if there is any error then append on the screen
+       if(errors.length >0)
+       {
+         $('#error_msg').html("");
+         for(var i in errors){
+           $('#error_msg').append('<p>'+errors[i]+'</p>');
+         }
+       }
+       else{
+         alert('Hi '+name+'! Your Cruise leaves on '+from_date+' and returns on '+to_date);
+       }
+       return false;
+     });
+ </script>
+</html>

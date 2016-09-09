@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta charset="utf-8">
+    <title>Hover In Out</title>
+  </head>
+  <body>
+    <div id="container">
+      <img src="img/codeG.png" data-alt-src='img/CoderGirl.png' alt="code" />
+      <img src="img/codeG.png" data-alt-src='img/CoderGirl.png' alt="code" />
+      <img src="img/codeG.png" data-alt-src='img/CoderGirl.png' alt="code" />
+      <img src="img/codeG.png" data-alt-src='img/CoderGirl.png' alt="code" />
+    </div>
+  </body>
+  <script>
+    var firstImg = $('img').attr('src');
+    var secondImg = $('img').attr('data-alt-src');
+    $('img').hover(function(){
+      $(this).attr('src',secondImg);
+    },function(){
+      $(this).attr('src',firstImg);
+    });
+  </script>
+</html>

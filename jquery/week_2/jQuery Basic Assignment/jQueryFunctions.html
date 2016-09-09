@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <title>My jQuery basic assignments</title>
+  <script>
+    $(document).ready(function(){
+      $('#img, #fadeIn').hide();
+    });
+  </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>My jQuery basic assignment!</h1>
+      <div class="box">
+        <p>
+          When you click AddClass button this paragraph will be 'red'. Because
+          the class '.red' is added ;)
+        </p>
+        <button id="btn1">AddClass</button>
+        <a href="#">click me</a><span></span>
+      </div><!--end of box-->
+      <div class="box">
+         <div id="img">
+           <img src="CoderGirl.png" alt="CoderGirl" width="100" height="100" />
+         </div>
+        <button id="btn2">SlideToggle</button>
+        <div id="img2">
+          <img src="flag.jpg" alt="flag" />
+        </div>
+        <button id="sildeUp">Silde Up</button>
+        <button id="sildeDown">Silde Down</button>
+      </div><!--end of box-->
+      <div class="box">
+        <div id="p"> </div>
+        <span id="fadeIn">Faded in yey!</span>
+        <button id="btn3">Append & Fade In</button>
+      </div><!--end of box-->
+      <div class="box">
+        <input type="text" name="name"><span>Focus the element!</span>
+      </div><!--end of box-->
+      <div class="box">
+        <img src="flag.jpg" alt="flag" id="flag" />
+        <button id="b1">Hide</button>
+        <button id="b2">Show</button>
+      </div><!--end of box-->
+      <div class="box">
+        <textarea placeholder="text area" rows="8" cols="40"></textarea>
+        <button id="ch">Change</button>
+        <h2>This text is normal!</h2>
+      </div><!--end of box-->
+      <div class="box">
+        <button id="dataBtn">Attach data to div element</button>
+        <button id="dataBtn2">Get data attached to div element</button>
+        <div id="data"></div>
+      </div><!--end of box-->
+      <div class="box">
+        <p id="toggle">
+          This paragraph calls a .toggle() function!
+        </p>
+        <button id="tglBtn">Toggle</button>
+        </div><!--end of box-->
+    </div><!--end of container-->
+  </body>
+  <script>
+    $('#tglBtn').click(function(){
+      $('#toggle').toggle();
+    });
+    $('#dataBtn').click(function(){
+      $('#data').data('greeting','Hello there!');
+    });
+    $('#dataBtn2').click(function(){
+      alert($('#data').data('greeting'));
+    });
+    $('#ch').click(function(){
+      $('textarea').attr('placeholder','This textarea is changed!');
+      $('h2').html('<i>Normal</i>');
+    });
+    $("#btn1").click(function(){
+      $("p").addClass("red");
+    });
+    $("#btn2").click(function(){
+      $("#img").slideToggle("slow");
+    });
+    $('#sildeUp').click(function(){
+      $('#img2').slideUp("slow");
+    });
+    $('#sildeDown').click(function(){
+      $('#img2').slideDown("slow");
+    });
+    $("#btn3").click(function(){
+      $("#p").append('This is an appended paragraph!')
+      $('#fadeIn').fadeIn('slow');
+    });
+    $("input").focus(function(){
+      $("span" ).css( "display", "inline" ).fadeOut( 1000 );
+    }).val("Type your name: ");
+    $('#b1').click(function(){
+      $('#flag').hide().after('The image is hidden!');
+    });
+    $('#b2').click(function(){
+      $('#flag').show().before('The image is showed! ');
+    });
+    $('a').click(function(){
+      $(this).next('span').text(" Text added inside a span!");
+    });
+    </script>
+</html>
